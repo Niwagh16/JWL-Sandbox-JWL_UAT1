@@ -65,11 +65,13 @@ report 50100 "Pending Invoices"
 
             trigger OnAfterGetRecord()
             begin
-                /*
+                /* Old Code Commented
                 ApprovalEntry.SetRange("Document No.", "Purchase Header"."No.");
                 if ApprovalEntry.FindFirst() then
                 if ApprMatrixRec.Get(ApprovalEntry."Approver ID") then;
                 */
+
+                //New Code added NSW
                 clear(Approvalname11);
                 ApprovalEntry.Reset();
                 ApprovalEntry.SetRange("Document No.", "Purchase Header"."No.");
